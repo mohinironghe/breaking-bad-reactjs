@@ -1,0 +1,30 @@
+.card{
+    background-color: #131313;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: 520px;
+    height: 218px;
+    left: 0px;
+    top: 64px;
+    display: flex;
+    text-align: left;
+    padding: 10px 20px;
+}
+.details{
+    margin-left: 25px;
+}
+.portrayed{
+    color: #18CA75;
+    padding-right: 20px;
+}
+.nickName{
+    font-size: 18px;
+    font-weight: 300;
+}
+.heartImg{
+    /* padding-left: 60px; */
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}

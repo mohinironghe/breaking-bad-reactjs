@@ -1,0 +1,62 @@
+.occupation {
+}
+.appeared {
+}
+.viewContainer {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+.img {
+  width: 50%;
+  position: relative;
+  opacity: 0.8;
+}
+.details {
+  width: 50%;
+  text-align: left;
+  margin-top: 50px;
+}
+.potrayed {
+  display: flex;
+}
+.potrayedDetail {
+  width: 50%;
+}
+.birthday {
+  padding-top: 30px;
+  width: 50%;
+  text-align: center;
+}
+h3 {
+  color: #18ca75;
+}
+.appeared ul {
+  display: flex;
+  list-style: none;
+  padding: 0px 14px;
+}
+.appeared li {
+  padding: 10px 20px;
+  border: 1px #232323 solid;
+  background-color: #232323;
+  border-radius: 3px;
+  margin: 0px 2px;
+}
+.name {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 60%;
+  left: 50%;
+}
+
+.backArrow {
+  position: absolute;
+  top: 5%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+
+}
+.birthday img{
+    padding: 0px 10px;
+}

@@ -4,7 +4,6 @@ function ViewDetails(){
     const location = useLocation();
     const navigate = useNavigate();
     let userDetail = location.state;
-    console.log(userDetail);
 
     function handleBack(){
         navigate("/",);
@@ -12,7 +11,8 @@ function ViewDetails(){
     return(
         <div className={classes.viewContainer}>
             <div className={classes.img}>
-                <img src={userDetail.img} height="850px" width="600px" alt='' />
+                {/* src={userDetail.img} */}
+                <img  className={classes.background} style={{"background": `linear-gradient(to bottom, rgba(0, 0, 0, 0.34) 0%, rgba(0, 0, 0, 1) 100%), url(${userDetail.img}) no-repeat`}} height="885px" width="740px" alt='' />
                 <img className={classes.backArrow} src='../icons/arrow.png' onClick={handleBack}  alt=''/>
                 <div className={classes.name}>
                 <div className={classes.nameDetail}>

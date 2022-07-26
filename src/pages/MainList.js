@@ -7,7 +7,6 @@ function MainList(){
     const [isLoading,setIsLoading] = useState(true);
     const [loadedBads,setLoadedBads] = useState([]);
     const search = useSelector((state)=> state.search);
-    console.log(search);
     useEffect(()=>{
        getAllList(search).then((data)=>{
            setIsLoading(false);

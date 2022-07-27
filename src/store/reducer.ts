@@ -1,14 +1,14 @@
 import * as actionTypes from './actions';
-
-const initialState = {
+import {User} from '../interfaces/User';
+import {InitialState} from '../interfaces/InitialState'
+const initialState:InitialState = {
     search:'',
     favorites:[]
 
 }
-const reducer = (state=initialState,action)=>{
+const reducer = (state=initialState,action:{type:string,payload:any})=>{
     switch (action.type){
         case actionTypes.ADD_FAVORITE:
-            action.payload.isFavorite = true;
             return  {
                 ...state,
                 favorites:[
@@ -17,7 +17,7 @@ const reducer = (state=initialState,action)=>{
             };
         case actionTypes.REMOVE_FAVORITE:
             
-            let newFavorites = state.favorites.filter((favorite) => {
+            let newFavorites = state.favorites.filter((favorite:User) => {
                 return action.payload !== favorite.char_id;
               });
 

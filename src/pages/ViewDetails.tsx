@@ -1,9 +1,11 @@
 import {useLocation,useNavigate} from 'react-router-dom';
-import classes from './ViewDetail.module.css'
+import classes from './ViewDetail.module.css';
+import {User} from '../interfaces/User';
+
 function ViewDetails(){
-    const location = useLocation();
+    const location:any = useLocation();
     const navigate = useNavigate();
-    let userDetail = location.state;
+    const userDetail:User = location.state;
 
     function handleBack(){
         navigate("/",);

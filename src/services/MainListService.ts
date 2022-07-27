@@ -1,4 +1,4 @@
-export async function  getAllList(search){
+export async function  getAllList(search:string){
     try {
         let url;
         if(search){

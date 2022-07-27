@@ -16,7 +16,7 @@ function App() {
     // </div>
     <Layout>
       <Routes>
-        <Route path='/' exact element={<MainList />}/>
+        <Route path='/' element={<MainList />}/>
         <Route path='/favorites' element={<Favorites /> } />
         <Route path='/detail' element={<ViewDetails /> } />
       </Routes>

@@ -1,9 +1,9 @@
 import { connect, useSelector } from "react-redux";
 import BradLists from "../components/BradLists";
 import { useNavigate } from "react-router-dom";
-import classes from "./Favorites.module.css";
-function Favorites(props) {
-  const list = useSelector((state) => state.favorites);
+import { InitialState } from "../interfaces/InitialState";
+function Favorites() {
+  const list = useSelector((state:InitialState) => state.favorites);
   const navigate = useNavigate();
   // const [favorites,setFavorites] = useState([]);
   // let array = [];
@@ -17,7 +17,7 @@ function Favorites(props) {
     </div>
   );
 }
-const mapStateToProps = (state) => {
-  return { favorites: state.favorite };
+const mapStateToProps = (state:InitialState) => {
+  return { favorites: state.favorites };
 };
 export default connect(mapStateToProps)(Favorites);

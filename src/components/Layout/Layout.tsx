@@ -1,6 +1,6 @@
 import MainNav from "./MainNav";
 import '../../App.css'
-function Layout (props){
+function Layout (props:any){
     return(
         <div className="App">
             <MainNav />

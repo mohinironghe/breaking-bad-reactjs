@@ -2,12 +2,14 @@ import classes from "./Card.module.css";
 import { addFavorite, removeFavorite } from "../store/actions";
 import { useDispatch,useSelector } from "react-redux";
 import { useNavigate } from 'react-router-dom';
-function Card(props) {
+import { User } from "../interfaces/User";
+import { InitialState } from "../interfaces/InitialState";
+function Card(props:any) {
   const dispatch = useDispatch();
   const navigate = useNavigate(); 
-  const list = useSelector((state)=>state.favorites);
+  const list = useSelector((state:InitialState)=>state.favorites);
   let prop = props.items;
-  let isLocalFavorite = list.find((item)=>item.char_id === props.items.char_id);
+  let isLocalFavorite = list.find((item:User)=>item.char_id === props.items.char_id);
   function handleClick() {
     if(isLocalFavorite){
         dispatch(removeFavorite(props.items.char_id));

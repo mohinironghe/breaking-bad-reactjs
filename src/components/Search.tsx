@@ -14,9 +14,11 @@ function Search() {
       setSearch(true);
     }
   }
-  function onInputChange(event) {
+
+  const onInputChange = (event:any) => {
     dispatch(updateSearch(event.target.value));
-  }
+  };
+
   return (
       
     <div className={classes.searchContainer}>

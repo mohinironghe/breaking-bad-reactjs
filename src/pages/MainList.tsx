@@ -3,10 +3,12 @@ import classes from './MainList.module.css';
 import {getAllList} from '../services/MainListService';
 import { useState,useEffect } from "react";
 import {useSelector} from 'react-redux';
+import {InitialState} from '../interfaces/InitialState'
+
 function MainList(){
     const [isLoading,setIsLoading] = useState(true);
     const [loadedBads,setLoadedBads] = useState([]);
-    const search = useSelector((state)=> state.search);
+    const search = useSelector((state:InitialState)=> state.search);
     useEffect(()=>{
        getAllList(search).then((data)=>{
            setIsLoading(false);

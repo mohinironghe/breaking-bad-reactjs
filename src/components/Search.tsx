@@ -15,10 +15,10 @@ function Search() {
     }
   }
 
-  const onInputChange = (event:any) => {
-    dispatch(updateSearch(event.target.value));
-  };
-
+  const onInputChange = (e: React.FormEvent<HTMLInputElement>): void => {
+    console.log(e.currentTarget.value)
+    dispatch(updateSearch(e.currentTarget.value));
+  }
   return (
       
     <div className={classes.searchContainer}>

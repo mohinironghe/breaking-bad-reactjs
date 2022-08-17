@@ -6,7 +6,11 @@ const initialState:InitialState = {
     favorites:[]
 
 }
-const reducer = (state=initialState,action:{type:string,payload:any})=>{
+type ACTIONTYPE =
+  | { type: "ADD_FAVORITE"; payload: User }
+  | { type: "REMOVE_FAVORITE"; payload: User }
+  | { type: "UPDATE_SEARCH"; payload: string } ;
+const reducer = (state=initialState,action:ACTIONTYPE):InitialState=>{
     switch (action.type){
         case actionTypes.ADD_FAVORITE:
             return  {
@@ -18,7 +22,7 @@ const reducer = (state=initialState,action:{type:string,payload:any})=>{
         case actionTypes.REMOVE_FAVORITE:
             
             let newFavorites = state.favorites.filter((favorite:User) => {
-                return action.payload !== favorite.char_id;
+                return action.payload.char_id !== favorite.char_id;
               });
 
               return {

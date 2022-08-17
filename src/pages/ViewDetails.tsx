@@ -1,11 +1,14 @@
+
 import {useLocation,useNavigate} from 'react-router-dom';
 import classes from './ViewDetail.module.css';
 import {User} from '../interfaces/User';
 
+
 function ViewDetails(){
-    const location:any = useLocation();
+    const location = useLocation();
+
     const navigate = useNavigate();
-    const userDetail:User = location.state;
+    const userDetail = location.state as User;
 
     function handleBack(){
         navigate("/",);

@@ -10,5 +10,6 @@ export interface User {
   portrayed: string;
   category: string;
   better_call_saul_appearance: [];
+  
 };
 
